@@ -4,6 +4,7 @@ import {
   clearSelectedTextAndInput,
 } from "./listAndInputModule.js";
 import { updateConvertedTextInStorage } from "./storageModule.js";
+import { displaySelectedTexts } from "./uiTextModule.js";
 /**
  * Handles the click event on conversion buttons, performing the text conversion,
  * updating the storage, and refreshing the UI accordingly.
