@@ -37,11 +37,11 @@ export const displaySelectedTexts = () => {
           ? convertedTextObj.cn
           : "Original";
 
-        listItem.textContent = `${textObj.str} - ${conversionName}`;
+        listItem.innerHTML = `<span class="text-content">${textObj.str} <br />TYPE: ${conversionName}</span>`;
 
         // Use the `createButton` function to add "Select" and "Delete" buttons to each list item
-        createButton("Select", selectText, textObj, listItem);
-        createButton("X", deleteText, textObj.id, listItem);
+        createButton("🔍", selectText, textObj, listItem);
+        createButton("🚫", deleteText, textObj.id, listItem);
 
         list.appendChild(listItem);
       });

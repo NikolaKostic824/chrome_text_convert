@@ -1,49 +1,86 @@
+/* Applies box-sizing border-box to all elements, 
+   making borders and paddings included in the element's total width and height. */
+* {
+  box-sizing: border-box;
+}
+
+/* Styles for the main container of the body, setting its font and width. */
 .body-container {
   font-family: Arial, sans-serif;
-  margin: 20px;
-  width: 300px;
+  width: 300px; /* Fixed width for the container */
 }
+
+/* Styles for the text input field, including margins, padding, color, and border. */
+#textInput {
+  margin-bottom: 10px;
+  padding: 8px;
+  width: 100%; /* Makes the input take full width of its parent */
+  color: #000; /* Text color */
+  border: 2px solid #007bff; /* Border color */
+}
+
+/* Removes list styling and padding for the list containing text elements. */
 #textsList {
   list-style-type: none;
   padding: 0;
 }
+
+/* Styles for each list item, including flex display, alignment, and border. */
 #textsList li {
-  margin-bottom: 5px;
+  display: flex;
+  align-items: center;
+  width: 100%;
+  border: 2px solid #007bff;
+  padding: 5px;
 }
-.body-container button {
+
+/* Styles for the text content within each list item, including flex growth and word wrapping. */
+#textsList li .text-content {
+  flex: 1 1 70%; /* Allows the text content to grow and take up 70% of the space */
+  white-space: normal; /* Ensures text wraps */
+  word-wrap: break-word; /* Breaks words to prevent overflow */
+  border-right: 3px solid #007bff; /* Adds a right border */
+}
+
+/* Styles for buttons within list items, including margins, padding, background color, and cursor appearance. */
+#textsList li button {
   margin: 10px;
   padding: 5px 10px;
   border: none;
   background-color: #007bff;
   color: #fff;
   cursor: pointer;
+  flex: 0 1 15%; /* Sets button width to 15% of its container, with flexibility to shrink */
+  text-align: center;
 }
+
+/* Hover effect for buttons within the body container. */
 .body-container button:hover {
   background-color: #0056b3;
 }
-.delete-button {
-  margin-left: 10px;
-  background-color: #dc3545;
+
+/* Styles for the main container of buttons, using flexbox for layout. */
+#buttonsMainContainer {
+  display: flex;
+  flex-wrap: wrap; /* Allows buttons to wrap to a new line */
+  gap: 10px; /* Space between buttons */
+  justify-content: flex-start; /* Aligns items to the start */
+  align-items: center; /* Vertically aligns items in their line */
 }
+
+/* Styles for buttons within the main container, including margins, padding, background color, border, and hover effects. */
 #buttonsMainContainer button {
   margin: 5px;
   padding: 8px 16px;
   background-color: #007bff;
   color: #fff;
   border: 1px solid #ddd;
-  border-radius: 4px;
+  border-radius: 4px; /* Rounds the corners of the buttons */
   cursor: pointer;
 }
 
+/* Hover effect for buttons within the buttons main container, changing background and text color. */
 #buttonsMainContainer button:hover {
   background-color: #fff;
   color: #007bff;
-}
-
-#textInput {
-  margin-bottom: 10px;
-  padding: 8px;
-  width: calc(100% - 16px); /* Adjust width as needed */
-  box-sizing: border-box;
-  color: #000;
 }
