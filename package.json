@@ -1,0 +1,28 @@
+{
+  "name": "chrome_text_convert",
+  "version": "1.0.0",
+  "description": "Chrome extension for converting selected text into various formats.",
+  "main": "content.js",
+  "type": "module",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/NikolaKostic824/chrome_text_convert.git"
+  },
+  "keywords": [
+    "text",
+    "convert",
+    "chrome",
+    "extension",
+    "programmer",
+    "tool"
+  ],
+  "author": "Nikola Kostic",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/NikolaKostic824/chrome_text_convert/issues"
+  },
+  "homepage": "https://github.com/NikolaKostic824/chrome_text_convert#readme"
+}
